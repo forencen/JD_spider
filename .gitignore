@@ -1,3 +1,4 @@
 .idea/*
 src/login.txt
 src/cookies.json
+/resources/login.txt

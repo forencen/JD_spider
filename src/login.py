@@ -2,20 +2,24 @@ import base64
 import getpass
 import json
 import os
+import sys
 import time
 
+from selenium import webdriver
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 
 from config.config import CONFIG
-from utils import get_cookies, write_cookies
+from utils import get_cookies
+from utils import write_cookies
+from utils import init_browser
 
 
 def get_account_pwd():
-    if os.path.exists("login.txt"):
-        with open('login.txt', 'r', encoding='utf-8') as f:
+    if os.path.exists("../resources/login.txt"):
+        with open('../resources/login.txt', 'r', encoding='utf-8') as f:
             res = base64.b64decode(f.read())
             res = json.loads(res.decode())
             account, pwd = res.get('account'), res.get('pwd')
@@ -26,7 +30,8 @@ def get_account_pwd():
     return account, pwd
 
 
-def login(login_browser):
+def login():
+    login_browser = init_browser()
     wait_login = WebDriverWait(login_browser, CONFIG['WAIT_TIME'])
     login_browser.get('https://jd.com')
     cookies = get_cookies()
@@ -59,11 +64,12 @@ def login(login_browser):
             continue
     print('登陆成功！')
     time.sleep(2)
-    with open('login.txt', 'w', encoding='utf-8') as f:
-        f.write(base64.b64decode(json.dumps({'account': account, 'pwd': pwd}).encode()).decode())
+    with open('../resources/login.txt', 'w', encoding='utf-8') as f:
+        f.write(base64.b64encode(json.dumps({'account': account, 'pwd': pwd}).encode()).decode())
     cookies = login_browser.get_cookies()
     write_cookies(cookies)
     # 关闭登陆浏览器
     login_browser.quit()
+    return cookies
 
 
