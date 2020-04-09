@@ -7,10 +7,9 @@ from selenium.webdriver.support import expected_conditions as EC
 
 from config.config import CONFIG
 from utils import init_browser
-from bs4 import BeautifulSoup
 
 
-def get_order_info(cookies):
+def click_jd_hot_try(cookies):
     browser = init_browser(options=[])
     wait_browser = WebDriverWait(browser, CONFIG['WAIT_TIME'])
     browser.get('https://jd.com')

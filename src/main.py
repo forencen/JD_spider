@@ -1,5 +1,5 @@
 from login import login
-from order_info import get_order_info
+from order_info import click_jd_hot_try
 from utils import get_cookies
 
 if __name__ == '__main__':
@@ -7,5 +7,6 @@ if __name__ == '__main__':
     cookies = get_cookies()
     if not cookies:
         cookies = login()
-    get_order_info(cookies)
+    # 热点试用
+    click_jd_hot_try(cookies)
 
