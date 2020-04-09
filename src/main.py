@@ -1,5 +1,5 @@
+from hot_try import click_jd_hot_try
 from login import login
-from order_info import click_jd_hot_try
 from utils import get_cookies
 
 if __name__ == '__main__':

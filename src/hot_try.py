@@ -1,4 +1,5 @@
 import time
+import logging
 
 from selenium.common.exceptions import TimeoutException, NoSuchElementException
 from selenium.webdriver.common.by import By
@@ -8,9 +9,14 @@ from selenium.webdriver.support import expected_conditions as EC
 from config.config import CONFIG
 from utils import init_browser
 
+logging.basicConfig(level=logging.INFO, filename='logger_hot_ty.log',
+                    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+
+logger = logging.getLogger(__name__)
+
 
 def click_jd_hot_try(cookies):
-    browser = init_browser(options=[])
+    browser = init_browser(options=['--headless', 'log-level=2'])
     wait_browser = WebDriverWait(browser, CONFIG['WAIT_TIME'])
     browser.get('https://jd.com')
     for cookie in cookies:
@@ -22,6 +28,7 @@ def click_jd_hot_try(cookies):
     urls = [item.get_attribute("href") for item in hot_try.find_elements_by_xpath('./div[1]/ul/li//a[@href]')]
     for url in urls:
         time.sleep(3)
+        logger.info(url)
         browser.get(url)
         time.sleep(2)
         try_btn = browser.find_element_by_css_selector(
@@ -33,6 +40,7 @@ def click_jd_hot_try(cookies):
             try:
                 tip = browser.find_element_by_css_selector(tip_select)
                 if tip and '申请成功' in tip.text:
+                    logger.info('%s 申请成功' % url)
                     continue
             except NoSuchElementException as e:
                 pass
@@ -44,8 +52,11 @@ def click_jd_hot_try(cookies):
                     )
                 )
                 browser.find_element_by_css_selector(css_select).click()
+                logger.info('%s 申请成功' % url)
             except TimeoutException:
                 continue
+        else:
+            logger.info('%s 已经申请过' % url)
 
 
 
