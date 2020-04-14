@@ -4,7 +4,7 @@ import json
 import os
 import time
 
-from selenium.common.exceptions import TimeoutException
+from selenium.common.exceptions import TimeoutException, NoSuchElementException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
@@ -28,6 +28,26 @@ def get_account_pwd():
     return account, pwd
 
 
+def login_photo_validate(login_browser):
+    try:
+        btn_left = login_browser.find_element_by_xpath(
+            '//*[@id="JDJRV-wrap-loginsubmit"]/div/div/div/div[2]/div[1]/div[1]')
+        template_base64 = login_browser.find_element_by_xpath(
+            '//*[@id="JDJRV-wrap-loginsubmit"]/div/div/div/div[1]/div[2]/div[2]/img').get_attribute('src')
+        bg_base64 = login_browser.find_element_by_xpath(
+            '//*[@id="JDJRV-wrap-loginsubmit"]/div/div/div/div[1]/div[2]/div[1]/img').get_attribute('src')
+        template_image_data = base64.b64decode(template_base64.split(',')[1])
+        with open('../resources/template.png', 'wb') as f:
+            f.write(template_image_data)
+        bg_image_data = base64.b64decode(bg_base64.split(',')[1])
+        with open('../resources/bg.png', 'wb') as f:
+            f.write(bg_image_data)
+
+    except NoSuchElementException as e:
+        return False
+
+
+
 def login():
     login_browser = init_browser()
     wait_login = WebDriverWait(login_browser, CONFIG['WAIT_TIME'])
@@ -49,7 +69,6 @@ def login():
     time.sleep(1)
     login_browser.find_element_by_xpath('//*[@id="loginsubmit"]').click()
     time.sleep(1)
-
     # 循环检测是否登陆
     while True:
         try:
@@ -59,7 +78,8 @@ def login():
             )
             break
         except TimeoutException:
-            continue
+            login_photo_validate(login_browser)
+
     print('登陆成功！')
     time.sleep(2)
     with open('../resources/login.txt', 'w', encoding='utf-8') as f:
