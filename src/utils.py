@@ -1,9 +1,22 @@
+import logging
+import logging.handlers
 import os
 import json
 import time
 import sys
 
 from selenium import webdriver
+
+log_file = '../log/logger.log'
+LOGGING_MSG_FORMAT = '[%(asctime)s] [%(levelname)s] [%(module)s] [%(funcName)s] [%(lineno)d] %(message)s'
+time_handler = logging.handlers.TimedRotatingFileHandler(log_file, when='D', interval=1, backupCount=0)
+time_handler.suffix = '%Y-%m-%d.log'
+time_handler.setLevel('INFO')  # error以上的内容输出到文件里面
+formatter = logging.Formatter(LOGGING_MSG_FORMAT)
+time_handler.setFormatter(formatter)
+logger = logging.getLogger('JD')
+logger.setLevel('INFO')
+logger.addHandler(time_handler)
 
 
 def get_cookies(key=None):
@@ -47,3 +60,5 @@ def init_browser(options=None):
         browser = webdriver.Chrome(executable_path='../driver/chromedriver_mac',
                                    chrome_options=chrome_options)
     return browser
+
+

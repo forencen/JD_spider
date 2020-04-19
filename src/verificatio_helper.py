@@ -70,14 +70,14 @@ def find_pic(target, template):
 
     res = cv2.matchTemplate(target_gray, template_rgb, cv2.TM_CCOEFF_NORMED)
     value = cv2.minMaxLoc(res)
-    h, w = template_rgb.shape
+    # h, w = template_rgb.shape
     top_left = (value[2:][0][0], value[2:][0][1])
-    bottom_right = (top_left[0] + w, top_left[1] + h)
-    cv2.rectangle(target_rgb, top_left, bottom_right, (222, 100, 35), 4)
-    cv2.imshow('adaptive_image_gray', target_gray)
-    cv2.imshow('adaptive_template_gray', template_rgb)
-    cv2.imshow('original', target_rgb)
-    print(top_left[0])
+    # bottom_right = (top_left[0] + w, top_left[1] + h)
+    # cv2.rectangle(target_rgb, top_left, bottom_right, (222, 100, 35), 4)
+    # cv2.imshow('adaptive_image_gray', target_gray)
+    # cv2.imshow('adaptive_template_gray', template_rgb)
+    # cv2.imshow('original', target_rgb)
+    # print(top_left[0])
     cv2.waitKey(0)
 
     return top_left

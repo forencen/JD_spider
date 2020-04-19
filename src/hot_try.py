@@ -1,5 +1,4 @@
 import datetime
-import logging
 import time
 
 from selenium.common.exceptions import TimeoutException, NoSuchElementException
@@ -8,14 +7,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 
 from config.config import CONFIG
-from utils import init_browser
-
-log_file = '../log/try/logger_hot_try.log'
-LOGGING_MSG_FORMAT = '[%(asctime)s] [%(levelname)s] [%(module)s] [%(funcName)s] [%(lineno)d] %(message)s'
-LOGGING_DATE_FORMAT = '%Y-%m-%d %H:%M:%S'
-
-logging.basicConfig(level=logging.INFO, filename=log_file, format=LOGGING_MSG_FORMAT, datefmt=LOGGING_DATE_FORMAT)
-logger = logging.getLogger(__name__)
+from utils import init_browser, logger
 
 
 def click_jd_hot_try(cookies):
@@ -64,4 +56,4 @@ def click_jd_hot_try(cookies):
                 logger.info('%s 已经申请过' % url)
         except Exception:
             logger.error('%s 申请出错' % url, exc_info=True)
-    logger.info('%s 已申请完毕' % datetime.date())
+    logger.info('%s 已申请完毕' % datetime.date.today())

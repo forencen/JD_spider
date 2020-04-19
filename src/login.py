@@ -15,15 +15,9 @@ from config.config import CONFIG
 from utils import get_cookies
 from utils import init_browser
 from utils import write_cookies
+from utils import logger
 from verificatio_helper import find_pic, get_tracks
 
-
-log_file = '../log/login/logger_login.log'
-LOGGING_MSG_FORMAT = '[%(asctime)s] [%(levelname)s] [%(module)s] [%(funcName)s] [%(lineno)d] %(message)s'
-LOGGING_DATE_FORMAT = '%Y-%m-%d %H:%M:%S'
-
-logging.basicConfig(level=logging.INFO, filename=log_file, format=LOGGING_MSG_FORMAT, datefmt=LOGGING_DATE_FORMAT)
-logger = logging.getLogger(__name__)
 
 
 def get_account_pwd():
