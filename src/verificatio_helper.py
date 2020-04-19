@@ -1,109 +1,88 @@
+import random
+
 import cv2
 import numpy as np
-import math
 
 
-def swipe():
-    pass
+def ease_out_quad(x):
+    return 1 - (1 - x) * (1 - x)
 
 
-def template_match(original_image, template_ori):
-    # Convert to grayscale
-    image_gray = cv2.cvtColor(cv2.GaussianBlur(original_image, (3, 3), 0), cv2.COLOR_BGR2GRAY)
-    gaussian_template = cv2.cvtColor(cv2.GaussianBlur(template_ori, (3, 3), 0), cv2.COLOR_BGR2GRAY)
-    # template_gray = handle_template(template_ori)
-    # ret, image_gray = cv2.threshold(image_gray, 127, 255, cv2.THRESH_BINARY)
-    # 阈值二值化
-    adaptive_image_gray = cv2.adaptiveThreshold(image_gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 25,
-                                                5)
-    adaptive_template_gray = handle_template(gaussian_template)
+def ease_out_quart(x):
+    return 1 - pow(1 - x, 4)
 
-    # assign width and height of template in w and h
-    h, w = gaussian_template.shape
-    # Perform match operations.
-    res = cv2.matchTemplate(adaptive_image_gray, adaptive_template_gray, cv2.TM_SQDIFF_NORMED)
 
-    min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(res)
-    top_left = max_loc
+def ease_out_expo(x):
+    if x == 1:
+        return 1
+    else:
+        return 1 - pow(2, -10 * x)
+
+
+def get_tracks(distance, seconds, ease_func):
+    tracks = [0]
+    offsets = [0]
+    for t in np.arange(0.0, seconds, 0.1):
+        ease = globals()[ease_func]
+        offset = round(ease(t / seconds) * distance)
+        tracks.append(offset - offsets[-1])
+        offsets.append(offset)
+    return offsets, tracks
+
+
+def swipe(distance):
+    # 移动间隙
+    tracks = []
+    offset = 45
+    # 减速标示
+    turn_dis = distance * 2 / 3
+    t = 0.1
+    # 初速度 为 0
+    v = 0
+    while offset < distance:
+        if offset < turn_dis:
+            a = random.randint(100, 105)
+        else:
+            a = random.randint(20, 30)
+        # 计算加速度和速度
+        v0 = v
+        # 当前时刻速度
+        v = v0 + a * t
+        move_dis = v0 * t + 1 / 2 * a * t
+        offset += move_dis
+        tracks.append(round(move_dis, 2))
+    return tracks
+
+
+def find_pic(target, template):
+    """
+    找出图像中最佳匹配位置
+    :param target: 目标即背景图
+    :param template: 模板即需要找到的图
+    :return: 返回最佳匹配及其最差匹配和对应的坐标
+    """
+    target_rgb = cv2.imread(target)
+    target_gray = cv2.cvtColor(target_rgb, cv2.COLOR_BGR2GRAY)
+    template_rgb = cv2.imread(template, 0)
+
+    # template_rgb = cv2.adaptiveThreshold(template_rgb, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 25, 5)
+    # adaptive_template_gray = handle_template(gaussian_template)
+
+    res = cv2.matchTemplate(target_gray, template_rgb, cv2.TM_CCOEFF_NORMED)
+    value = cv2.minMaxLoc(res)
+    h, w = template_rgb.shape
+    top_left = (value[2:][0][0], value[2:][0][1])
     bottom_right = (top_left[0] + w, top_left[1] + h)
-    cv2.rectangle(original_image, top_left, bottom_right, (222, 100, 35), 4)
-
-    cv2.imshow('adaptive_image_gray', adaptive_image_gray)
-    cv2.imshow('adaptive_template_gray', adaptive_template_gray)
-    cv2.imshow('original', original_image)
+    cv2.rectangle(target_rgb, top_left, bottom_right, (222, 100, 35), 4)
+    cv2.imshow('adaptive_image_gray', target_gray)
+    cv2.imshow('adaptive_template_gray', template_rgb)
+    cv2.imshow('original', target_rgb)
+    print(top_left[0])
     cv2.waitKey(0)
 
-
-def cut_template(img):
-    _, thresh = cv2.threshold(img, 1, 255, cv2.THRESH_BINARY)
-
-    contours, hierarchy = cv2.findContours(thresh, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-    cnt = contours[0]
-    x, y, w, h = cv2.boundingRect(cnt)
-
-    crop = img[y:y + h, x:x + w]
-    return crop
-    # cv2.imwrite('../resources/template.png', crop)
-
-
-def handle_template(image):
-    gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-    width, heigth = image.shape
-    for h in range(heigth):
-        for w in range(width):
-            if image[w, h] == 0:
-                image[w, h] = 96
-    # cv.imshow('gray', gray)
-    binary = cv2.inRange(gray, 96, 96)
-    res = cv2.morphologyEx(binary, cv2.MORPH_OPEN, kernel)  # 开运算去除白色噪点
-    # cv.imshow('res', res)
-    return res
-
-
-def match(target, template):
-    img_rgb = cv2.imread(target)
-    img_gray = cv2.cvtColor(img_rgb, cv2.COLOR_BGR2GRAY)
-    template = cv2.imread(template, 0)
-    run = 1
-    w, h = template.shape[::-1]
-    print(w, h)
-    res = cv2.matchTemplate(img_gray, template, cv2.TM_CCOEFF_NORMED)
-    # 使用二分法查找阈值的精确值
-    L = 0
-    R = 1
-    while run < 20:
-        run += 1
-        threshold = (R + L) / 2
-        print(threshold)
-        if threshold < 0:
-            print('Error')
-            return None
-        loc = np.where(res >= threshold)
-        print(len(loc[1]))
-        if len(loc[1]) > 1:
-            L += (R - L) / 2
-        elif len(loc[1]) == 1:
-            print('目标区域起点x坐标为：%d' % loc[1][0])
-            break
-        elif len(loc[1]) < 1:
-            R -= (R - L) / 2
-
-    for pt in zip(*loc[::-1]):
-        cv2.rectangle(img_rgb, pt, (pt[0] + w, pt[1] + h), (7, 279, 151), 2)
-    cv2.imshow('Dectected', img_rgb)
-    cv2.waitKey(0)
-    cv2.destroyAllWindows()
-    return loc[1][0]
+    return top_left
 
 
 if __name__ == '__main__':
-    image_full = cv2.imread('../resources/WechatIMG27.png')
-    image_item = cv2.imread('../resources/WechatIMG26.png')
-    template_match(image_full, image_item)
-    # match('../resources/WechatIMG26.png', '../resources/WechatIMG27.png')
-    # image_gray = cv2.cvtColor(cv2.GaussianBlur(image_full, (3, 3), 0), cv2.COLOR_BGR2GRAY)
-    # ret, image_gray = cv2.threshold(image_gray, 127, 255, cv2.THRESH_BINARY)
-    # cv2.imshow('original', image_gray)
-    # cv2.waitKey(0)
-
-
+    find_pic('../captcha/bg_1587310345.png', '../captcha/template_1587310345.png')
+    # get_tracks(117, 12, 'ease_out_expo')
