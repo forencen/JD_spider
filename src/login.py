@@ -53,7 +53,7 @@ def login_photo_validate(login_browser):
         x, _ = find_pic('../captcha/%s' % bg_name, '../captcha/%s' % template_name)
         # tracks = swipe(x)
         x = x - (38 / 2)
-        logger.info('bg: %s, template: %s, %s', (bg_name, template_name, x))
+        # logger.info('bg: %s, template: %s, %s', (bg_name, template_name, x))
         offsets, tracks = get_tracks(x, 1, 'ease_out_expo')
         ActionChains(login_browser).click_and_hold(template).perform()
         for item in tracks:
@@ -66,7 +66,7 @@ def login_photo_validate(login_browser):
 
 
 def login():
-    login_browser = init_browser()
+    login_browser = init_browser(options=['--headless', 'log-level=2'])
     wait_login = WebDriverWait(login_browser, CONFIG['WAIT_TIME'])
     login_browser.get('https://jd.com')
     cookies = get_cookies()
