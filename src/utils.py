@@ -7,6 +7,8 @@ import sys
 
 from selenium import webdriver
 
+
+
 log_file = '../log/logger.log'
 LOGGING_MSG_FORMAT = '[%(asctime)s] [%(levelname)s] [%(module)s] [%(funcName)s] [%(lineno)d] %(message)s'
 time_handler = logging.handlers.TimedRotatingFileHandler(log_file, when='D', interval=1, backupCount=0)
@@ -23,11 +25,6 @@ def get_cookies(key=None):
     if os.path.exists('../resources/cookies.json'):
         with open('../resources/cookies.json', mode='r', encoding='utf-8') as f:
             res = json.load(f)
-            ts = int(time.time())
-            main_expiry = min([item.get('expiry', 999999999999999) for item in res])
-            if main_expiry < ts:
-                return None
-
             if key:
                 v = [item.get('value') for item in res if item.get('name') == key]
                 return v[0] if v else None
@@ -60,5 +57,29 @@ def init_browser(options=None):
         browser = webdriver.Chrome(executable_path='../driver/chromedriver_mac',
                                    chrome_options=chrome_options)
     return browser
+
+
+def is_login(login_browser, cookies):
+    from selenium.webdriver.common.by import By
+    from selenium.webdriver.support import expected_conditions as EC
+    from selenium.webdriver.support.wait import WebDriverWait
+    from config.config import CONFIG
+    from selenium.common.exceptions import TimeoutException
+    wait_login = WebDriverWait(login_browser, CONFIG['WAIT_TIME'])
+    login_browser.get('https://jd.com')
+    for cookie in cookies:
+        if 'expiry' in cookie:
+            cookie['expiry'] = int(cookie['expiry'])
+        login_browser.add_cookie(cookie)
+    login_browser.get('https://jd.com')
+    try:
+        wait_login.until(
+            EC.presence_of_element_located((By.CSS_SELECTOR,
+                                            '#ttbar-login > div.dt.cw-icon > a'))
+        )
+        login_browser.quit()
+        return True
+    except TimeoutException:
+        return False
 
 

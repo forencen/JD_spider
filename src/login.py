@@ -65,8 +65,7 @@ def login_photo_validate(login_browser):
         return False
 
 
-def login():
-    login_browser = init_browser(options=['--headless', 'log-level=2'])
+def login(login_browser):
     wait_login = WebDriverWait(login_browser, CONFIG['WAIT_TIME'])
     login_browser.get('https://jd.com')
     cookies = get_cookies()
