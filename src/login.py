@@ -13,7 +13,6 @@ from selenium.webdriver.support.wait import WebDriverWait
 
 from config.config import CONFIG
 from utils import get_cookies
-from utils import init_browser
 from utils import write_cookies
 from utils import logger
 from verificatio_helper import find_pic, get_tracks
