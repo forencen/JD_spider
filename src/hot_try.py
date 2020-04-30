@@ -1,3 +1,6 @@
+"""
+热点适用
+"""
 import datetime
 import time
 
@@ -11,7 +14,7 @@ from utils import init_browser, logger
 
 
 def click_jd_hot_try(cookies):
-    browser = init_browser(options=['--headless', 'log-level=2'])
+    browser = init_browser()
     wait_browser = WebDriverWait(browser, CONFIG['WAIT_TIME'])
     browser.get('https://jd.com')
     for cookie in cookies:

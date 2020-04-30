@@ -1,7 +1,6 @@
 import base64
 import getpass
 import json
-import logging
 import os
 import time
 
@@ -12,10 +11,10 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 
 from config.config import CONFIG
-from utils import get_cookies
+from utils import init_browser
 from utils import write_cookies
 from utils import logger
-from verificatio_helper import find_pic, get_tracks
+from tools.verificatio_helper import find_pic, get_tracks
 
 
 
@@ -64,12 +63,10 @@ def login_photo_validate(login_browser):
         return False
 
 
-def login(login_browser):
+def login():
+    login_browser = init_browser()
     wait_login = WebDriverWait(login_browser, CONFIG['WAIT_TIME'])
     login_browser.get('https://jd.com')
-    cookies = get_cookies()
-    if cookies:
-        pass
     # 登录界面
     login_browser.get(CONFIG['LOGIN_URL'])
     account_login_btn = login_browser.find_element_by_xpath('//*[@id="content"]/div[2]/div[1]/div/div[3]/a')
@@ -79,14 +76,17 @@ def login(login_browser):
     # 获取本定的用户名/密码
     account, pwd = get_account_pwd()
     login_browser.find_element_by_xpath('//*[@id="loginname"]').send_keys(account)
-    time.sleep(1)
+    time.sleep(1.2)
     login_browser.find_element_by_xpath('//*[@id="nloginpwd"]').send_keys(pwd)
-    time.sleep(1)
+    time.sleep(1.3)
     login_browser.find_element_by_xpath('//*[@id="loginsubmit"]').click()
-    time.sleep(1)
+    time.sleep(1.4)
     # 循环检测是否登陆
     try_login_count = 0
     while True:
+        if try_login_count > CONFIG.get('MAX_LOGIN_TIME', 10):
+            logger.error('登录失败,超过最大登录次数:%s' % CONFIG.get('MAX_LOGIN_TIME', 10))
+            return False
         try:
             wait_login.until(
                 EC.presence_of_element_located((By.CSS_SELECTOR,
@@ -95,9 +95,6 @@ def login(login_browser):
             break
         except TimeoutException:
             logger.info('start login %s' % (try_login_count + 1))
-            if try_login_count > CONFIG.get('MAX_LOGIN_TIME', 10):
-                logger.error('登录失败,超过最大登录次数:%s' % CONFIG.get('MAX_LOGIN_TIME', 10))
-                return False
             login_photo_validate(login_browser)
             try_login_count += 1
 
