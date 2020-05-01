@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="44fd5c86-7339-4dc6-b3ef-d311d1e2b0cb" name="Default Changelist" comment="日志" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
+  </component>
+  <component name="ProjectId" id="1aGZa91zsBqExPIL1tUA3UmjDfN" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/login" />
+      <recent name="$PROJECT_DIR$/src/tools" />
+      <recent name="$PROJECT_DIR$/src/order" />
+      <recent name="$PROJECT_DIR$/src/hot_try" />
+      <recent name="$PROJECT_DIR$/resources" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="JD_spider" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="verificatio_helper" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="JD_spider" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/verificatio_helper.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.verificatio_helper" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="44fd5c86-7339-4dc6-b3ef-d311d1e2b0cb" name="Default Changelist" comment="" />
+      <created>1586363951224</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1586363951224</updated>
+      <workItem from="1586363954929" duration="520000" />
+      <workItem from="1586437022725" duration="10529000" />
+      <workItem from="1586454791211" duration="27000" />
+      <workItem from="1586588873497" duration="37240000" />
+      <workItem from="1587527570490" duration="672000" />
+      <workItem from="1587636687402" duration="1200000" />
+      <workItem from="1588329737001" duration="1417000" />
+    </task>
+    <task id="LOCAL-00001" summary="login">
+      <created>1586364199157</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1586364199157</updated>
+    </task>
+    <task id="LOCAL-00002" summary="login">
+      <created>1586364384319</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1586364384319</updated>
+    </task>
+    <task id="LOCAL-00003" summary="jd hot_try">
+      <created>1586452929291</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1586452929291</updated>
+    </task>
+    <task id="LOCAL-00004" summary="jd hot_try">
+      <created>1586452987051</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1586452987051</updated>
+    </task>
+    <task id="LOCAL-00005" summary="log">
+      <created>1586454613383</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1586454613383</updated>
+    </task>
+    <task id="LOCAL-00006" summary="log">
+      <created>1586454776158</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1586454776158</updated>
+    </task>
+    <task id="LOCAL-00007" summary="validate">
+      <created>1586887076432</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1586887076432</updated>
+    </task>
+    <task id="LOCAL-00008" summary="优化登录 使用opencv 解析 jd 的滑块验证码">
+      <created>1587316643991</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1587316643991</updated>
+    </task>
+    <task id="LOCAL-00009" summary="readme">
+      <created>1587316912579</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1587316912579</updated>
+    </task>
+    <task id="LOCAL-00010" summary="日志">
+      <created>1587317926002</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1587317926002</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="login" />
+    <MESSAGE value="jd hot_try" />
+    <MESSAGE value="log" />
+    <MESSAGE value="validate" />
+    <MESSAGE value="优化登录 使用opencv 解析 jd 的滑块验证码" />
+    <MESSAGE value="readme" />
+    <MESSAGE value="日志" />
+    <option name="LAST_COMMIT_MESSAGE" value="日志" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2240" y="205" key="#Log_Highlighting_(ideolog)" timestamp="1587315370544">
+      <screen x="1680" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2240" y="205" key="#Log_Highlighting_(ideolog)/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1587315370544" />
+    <state x="611" y="286" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1588329795018">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="611" y="286" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1586886502511" />
+    <state x="611" y="286" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1588329795018" />
+    <state x="2378" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1587316960661" />
+    <state x="2711" y="193" width="677" height="579" key="#xdebugger.evaluate" timestamp="1587310670731">
+      <screen x="1680" y="0" width="1920" height="1080" />
+    </state>
+    <state x="797" y="438" width="677" height="579" key="#xdebugger.evaluate/0.0.1680.1050@0.0.1680.1050" timestamp="1586886875528" />
+    <state x="2711" y="193" width="813" height="523" key="#xdebugger.evaluate/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1587310670731" />
+    <state x="2591" y="452" key="#xdebugger.evaluate/1680.0.1920.1080/0.23.1680.982@1680.0.1920.1080" timestamp="1586973788634" />
+    <state x="413" y="125" key="CommitChangelistDialog2" timestamp="1588331164749">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="413" y="125" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1586887076299" />
+    <state x="413" y="125" key="CommitChangelistDialog2/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1588331164749" />
+    <state x="2152" y="129" key="CommitChangelistDialog2/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1587317925903" />
+    <state x="2152" y="129" key="CommitChangelistDialog2/1680.0.1920.1080/0.23.1680.1027@1680.0.1920.1080" timestamp="1586452986965" />
+    <state width="1588" height="466" key="DebuggerActiveHint" timestamp="1587307301817">
+      <screen x="1680" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1588" height="466" key="DebuggerActiveHint/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1587307301817" />
+    <state width="1638" height="363" key="GridCell.Tab.0.bottom" timestamp="1587799032763">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="363" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1587637073358" />
+    <state width="1638" height="363" key="GridCell.Tab.0.bottom/0.23.1680.982@0.23.1680.982" timestamp="1587637002474" />
+    <state width="1638" height="363" key="GridCell.Tab.0.bottom/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1587799032763" />
+    <state width="1878" height="375" key="GridCell.Tab.0.bottom/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1587317939633" />
+    <state width="1878" height="303" key="GridCell.Tab.0.bottom/1680.0.1920.1080/0.23.1680.1027@1680.0.1920.1080" timestamp="1587309613333" />
+    <state width="1878" height="375" key="GridCell.Tab.0.bottom/1680.0.1920.1080/0.23.1680.982@1680.0.1920.1080" timestamp="1587310593670" />
+    <state width="1878" height="375" key="GridCell.Tab.0.bottom/1680.23.1920.1057/0.23.1680.982@1680.23.1920.1057" timestamp="1587314267496" />
+    <state width="1638" height="363" key="GridCell.Tab.0.center" timestamp="1587799032762">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="363" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1587637073357" />
+    <state width="1638" height="363" key="GridCell.Tab.0.center/0.23.1680.982@0.23.1680.982" timestamp="1587637002473" />
+    <state width="1638" height="363" key="GridCell.Tab.0.center/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1587799032762" />
+    <state width="1878" height="375" key="GridCell.Tab.0.center/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1587317939632" />
+    <state width="1878" height="303" key="GridCell.Tab.0.center/1680.0.1920.1080/0.23.1680.1027@1680.0.1920.1080" timestamp="1587309613331" />
+    <state width="1878" height="375" key="GridCell.Tab.0.center/1680.0.1920.1080/0.23.1680.982@1680.0.1920.1080" timestamp="1587310593669" />
+    <state width="1878" height="375" key="GridCell.Tab.0.center/1680.23.1920.1057/0.23.1680.982@1680.23.1920.1057" timestamp="1587314267495" />
+    <state width="1638" height="363" key="GridCell.Tab.0.left" timestamp="1587799032761">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="363" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1587637073356" />
+    <state width="1638" height="363" key="GridCell.Tab.0.left/0.23.1680.982@0.23.1680.982" timestamp="1587637002472" />
+    <state width="1638" height="363" key="GridCell.Tab.0.left/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1587799032761" />
+    <state width="1878" height="375" key="GridCell.Tab.0.left/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1587317939631" />
+    <state width="1878" height="303" key="GridCell.Tab.0.left/1680.0.1920.1080/0.23.1680.1027@1680.0.1920.1080" timestamp="1587309613331" />
+    <state width="1878" height="375" key="GridCell.Tab.0.left/1680.0.1920.1080/0.23.1680.982@1680.0.1920.1080" timestamp="1587310593668" />
+    <state width="1878" height="375" key="GridCell.Tab.0.left/1680.23.1920.1057/0.23.1680.982@1680.23.1920.1057" timestamp="1587314267494" />
+    <state width="1638" height="363" key="GridCell.Tab.0.right" timestamp="1587799032762">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="363" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1587637073357" />
+    <state width="1638" height="363" key="GridCell.Tab.0.right/0.23.1680.982@0.23.1680.982" timestamp="1587637002474" />
+    <state width="1638" height="363" key="GridCell.Tab.0.right/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1587799032762" />
+    <state width="1878" height="375" key="GridCell.Tab.0.right/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1587317939632" />
+    <state width="1878" height="303" key="GridCell.Tab.0.right/1680.0.1920.1080/0.23.1680.1027@1680.0.1920.1080" timestamp="1587309613332" />
+    <state width="1878" height="375" key="GridCell.Tab.0.right/1680.0.1920.1080/0.23.1680.982@1680.0.1920.1080" timestamp="1587310593670" />
+    <state width="1878" height="375" key="GridCell.Tab.0.right/1680.23.1920.1057/0.23.1680.982@1680.23.1920.1057" timestamp="1587314267496" />
+    <state width="1638" height="363" key="GridCell.Tab.1.bottom" timestamp="1587799032760">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="363" key="GridCell.Tab.1.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1587637073356" />
+    <state width="1638" height="363" key="GridCell.Tab.1.bottom/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1587799032760" />
+    <state width="1878" height="375" key="GridCell.Tab.1.bottom/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1587317939631" />
+    <state width="1878" height="375" key="GridCell.Tab.1.bottom/1680.0.1920.1080/0.23.1680.1027@1680.0.1920.1080" timestamp="1586439334806" />
+    <state width="1878" height="375" key="GridCell.Tab.1.bottom/1680.23.1920.1057/0.23.1680.982@1680.23.1920.1057" timestamp="1586974611719" />
+    <state width="1638" height="363" key="GridCell.Tab.1.center" timestamp="1587799032759">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="363" key="GridCell.Tab.1.center/0.0.1680.1050@0.0.1680.1050" timestamp="1587637073354" />
+    <state width="1638" height="363" key="GridCell.Tab.1.center/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1587799032759" />
+    <state width="1878" height="375" key="GridCell.Tab.1.center/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1587317939630" />
+    <state width="1878" height="375" key="GridCell.Tab.1.center/1680.0.1920.1080/0.23.1680.1027@1680.0.1920.1080" timestamp="1586439334805" />
+    <state width="1878" height="375" key="GridCell.Tab.1.center/1680.23.1920.1057/0.23.1680.982@1680.23.1920.1057" timestamp="1586974611718" />
+    <state width="1638" height="363" key="GridCell.Tab.1.left" timestamp="1587799032758">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="363" key="GridCell.Tab.1.left/0.0.1680.1050@0.0.1680.1050" timestamp="1587637073353" />
+    <state width="1638" height="363" key="GridCell.Tab.1.left/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1587799032758" />
+    <state width="1878" height="375" key="GridCell.Tab.1.left/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1587317939630" />
+    <state width="1878" height="375" key="GridCell.Tab.1.left/1680.0.1920.1080/0.23.1680.1027@1680.0.1920.1080" timestamp="1586439334804" />
+    <state width="1878" height="375" key="GridCell.Tab.1.left/1680.23.1920.1057/0.23.1680.982@1680.23.1920.1057" timestamp="1586974611717" />
+    <state width="1638" height="363" key="GridCell.Tab.1.right" timestamp="1587799032760">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="363" key="GridCell.Tab.1.right/0.0.1680.1050@0.0.1680.1050" timestamp="1587637073355" />
+    <state width="1638" height="363" key="GridCell.Tab.1.right/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1587799032760" />
+    <state width="1878" height="375" key="GridCell.Tab.1.right/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1587317939630" />
+    <state width="1878" height="375" key="GridCell.Tab.1.right/1680.0.1920.1080/0.23.1680.1027@1680.0.1920.1080" timestamp="1586439334805" />
+    <state width="1878" height="375" key="GridCell.Tab.1.right/1680.23.1920.1057/0.23.1680.982@1680.23.1920.1057" timestamp="1586974611718" />
+    <state x="575" y="242" key="RollbackChangesDialog" timestamp="1588330911551">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="575" y="242" key="RollbackChangesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1586364379490" />
+    <state x="575" y="242" key="RollbackChangesDialog/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1588330911551" />
+    <state x="2141" y="179" key="SettingsEditor" timestamp="1586437065736">
+      <screen x="1680" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2141" y="179" key="SettingsEditor/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1586437065736" />
+    <state x="2183" y="260" key="Vcs.Push.Dialog.v2" timestamp="1587317927344">
+      <screen x="1680" y="0" width="1920" height="1080" />
+    </state>
+    <state x="440" y="253" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1586887077806" />
+    <state x="2183" y="260" key="Vcs.Push.Dialog.v2/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1587317927344" />
+    <state x="2183" y="260" key="Vcs.Push.Dialog.v2/1680.0.1920.1080/0.23.1680.1027@1680.0.1920.1080" timestamp="1586452988271" />
+    <state width="960" height="540" key="XDebugger.FullValuePopup" timestamp="1587310066066">
+      <screen x="1680" y="0" width="1920" height="1080" />
+    </state>
+    <state width="840" height="525" key="XDebugger.FullValuePopup/0.0.1680.1050@0.0.1680.1050" timestamp="1586886724455" />
+    <state width="840" height="525" key="XDebugger.FullValuePopup/0.23.1680.982@0.23.1680.982" timestamp="1586886728898" />
+    <state width="960" height="540" key="XDebugger.FullValuePopup/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1587310066066" />
+    <state x="100" y="100" width="1480" height="850" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1586884615995">
+      <screen x="0" y="23" width="1680" height="982" />
+    </state>
+    <state x="100" y="100" width="1480" height="850" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1680.982@0.23.1680.982" timestamp="1586884615995" />
+    <state x="2317" y="371" key="com.intellij.ide.util.TipDialog" timestamp="1586588874170">
+      <screen x="1680" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2317" y="371" key="com.intellij.ide.util.TipDialog/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1586588874170" />
+    <state x="628" y="449" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588331149077">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="628" y="449" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1680.1050@0.0.1680.1050" timestamp="1587636701438" />
+    <state x="628" y="449" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1588331149077" />
+    <state x="2398" y="462" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1587317913295" />
+    <state x="2398" y="462" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1680.0.1920.1080/0.23.1680.1027@1680.0.1920.1080" timestamp="1586452979177" />
+    <state x="2193" y="283" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1586594679786">
+      <screen x="1680" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2193" y="283" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1586594679786" />
+    <state x="2310" y="297" width="660" height="486" key="find.popup" timestamp="1587317380392">
+      <screen x="1680" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2310" y="297" width="660" height="486" key="find.popup/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1587317380392" />
+    <state width="600" height="424" key="javadoc.popup" timestamp="1586438785158">
+      <screen x="1680" y="0" width="1920" height="1080" />
+    </state>
+    <state width="600" height="424" key="javadoc.popup/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1586438785158" />
+    <state x="2305" y="241" key="search.everywhere.popup" timestamp="1586595160831">
+      <screen x="1680" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2305" y="241" key="search.everywhere.popup/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1586595160831" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/JD_spider$main.coverage" NAME="main Coverage Results" MODIFIED="1587636973282" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/JD_spider$verificatio_helper.coverage" NAME="verificatio_helper Coverage Results" MODIFIED="1587636967498" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+  </component>
+</project>
