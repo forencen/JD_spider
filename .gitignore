@@ -1,4 +1,4 @@
-.idea/*
+../../../.idea/misc.xml
 src/login.txt
 src/cookies.json
 /resources/login.txt

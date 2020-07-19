@@ -10,12 +10,11 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 
-from config.config import CONFIG
-from utils import init_browser
-from utils import write_cookies
-from utils import logger
+from config import CONFIG
+from tools.web_utils import init_browser
+from tools.web_utils import write_cookies
+from tools.logger_helper import logger
 from tools.verificatio_helper import find_pic, get_tracks
-
 
 
 def get_account_pwd():
