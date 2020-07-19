@@ -61,21 +61,3 @@ class HotTry(BaseTask):
         hot_try = self.find_element('//*[@id="sliderBox"]')
         urls = [item.get_attribute("href") for item in hot_try.find_elements_by_xpath('./div[1]/ul/li//a[@href]')]
         self.task_handler(urls)
-
-
-
-
-
-
-def click_jd_hot_try(cookies):
-    browser = init_browser()
-    wait_browser = WebDriverWait(browser, CONFIG['WAIT_TIME'])
-    browser.get('https://jd.com')
-    for cookie in cookies:
-        if 'expiry' in cookie:
-            cookie['expiry'] = int(cookie['expiry'])
-        browser.add_cookie(cookie)
-    browser.get('https://try.jd.com/')
-    hot_try = browser.find_element_by_xpath('//*[@id="sliderBox"]')
-    urls = [item.get_attribute("href") for item in hot_try.find_elements_by_xpath('./div[1]/ul/li//a[@href]')]
-
